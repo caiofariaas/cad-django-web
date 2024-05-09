@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualizar usuário</title>
+</head>
+<body>
+    <h1>Atualizar usuário</h1>
+
+    <form method='POST' action="/editar_user/{{ usuario.id_usuario }}">
+        {% csrf_token %}
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" value="{{ usuario.nome }}">
+
+        <label for="idade">idade::</label>
+        <input  id="idade" name="idade" value="{{ usuario.idade }}">
+
+        <button type="submit">Atualizar</button>
+    </form>
+</body>
+</html>

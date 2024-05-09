@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import include, path
 from app_cad_user import views
 
 urlpatterns = [
@@ -8,6 +8,6 @@ urlpatterns = [
     path('', views.home, name='home'),
     
     #usuario.com/usuarios
-    
-    path('usuarios/', views.usuarios, name='listagem_usuarios')
+
+    path('', include('app_cad_user.urls'))
 ]

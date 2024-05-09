@@ -23,11 +23,15 @@
                 <td>{{usuario.id_usuario}}</td>
                 <td>{{usuario.nome}}</td>
                 <td>{{usuario.idade}}</td>
+                <td style="text-align:center"><a href="/excluir/{{usuario.id_usuario}}"><i class="fa-solid fa-trash"></i></a></td>
+                <td style="text-align:center"><a href="/editar/{{usuario.id_usuario}}"><i class="fa-solid fa-pen-to-square"></i></a></td>                
             </tr>
             {% endfor %}
         </table>
     </div>
-        
+    
+        <script src="https://kit.fontawesome.com/c9237383f1.js" crossorigin="anonymous"></script>
+    
         <!-- Optional JavaScript; choose one of the two! -->
     
         <!-- Option 1: Bootstrap Bundle with Popper -->
